@@ -4,13 +4,25 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+FOR ANdroid:-->
 
-A few resources to get you started if this is your first Flutter project:
+      Add the permission in ManifestFile You wanted To be Granted like below
+          <uses-permission android:name="android.permission.INTERNET"/>
+          <uses-permission android:name="android.permission.CAMERA"/>
+          <!-- Permissions options for the `contacts` group -->
+          <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+          
+ FOR IOS:-->    
+         Create A podfile if not present and paste the permission you want to grant uncomment it i already added all the permission and set to 1 for enable 0 for disable
+         like below-->
+          ## dart: PermissionGroup.camera
+         'PERMISSION_CAMERA=1',
+          2- Inside IOS/Runner/info.plist and add
+                     <!-- Permission options for the `camera` group -->
+                     <key>NSCameraUsageDescription</key>
+                     <string>camera for taking photos</string>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+	                  < !-- Permission options for the `photos` group -->
+                    <key>NSPhotoLibraryUsageDescription</key>
+                   <string>photos</string>
